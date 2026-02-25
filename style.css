@@ -138,3 +138,55 @@ footer{
   border-top:1px solid rgba(212,175,55,0.2);
   opacity:0.6;
 }
+
+/* Smooth scroll universal */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fix iOS font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+
+  nav {
+    padding: 15px 5%;
+  }
+
+  nav div {
+    display: none; /* simple clean mobile */
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 70px 5%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
