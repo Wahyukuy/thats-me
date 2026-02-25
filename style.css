@@ -1,0 +1,140 @@
+:root{
+  --black:#0b0f19;
+  --blue:#1f6feb;
+  --gold1:#d4af37;
+  --gold2:#f5d76e;
+  --white:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background: var(--black);
+  color:var(--white);
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  top:-200px;
+  right:-200px;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle, rgba(31,111,235,0.25), transparent 70%);
+  z-index:-1;
+}
+
+nav{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 10%;
+  backdrop-filter:blur(10px);
+  background:rgba(11,15,25,0.5);
+  border-bottom:1px solid rgba(212,175,55,0.2);
+  z-index:1000;
+}
+
+nav h2{
+  color:var(--gold1);
+}
+
+nav a{
+  color:white;
+  margin-left:25px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--blue);
+}
+
+header{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 10%;
+}
+
+header h1{
+  font-size:3.5rem;
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+header p{
+  margin-top:15px;
+  opacity:0.7;
+  font-size:1.2rem;
+}
+
+.btn{
+  margin-top:30px;
+  padding:14px 35px;
+  border:none;
+  background:var(--blue);
+  color:white;
+  cursor:pointer;
+  border-radius:30px;
+  box-shadow:0 0 15px rgba(31,111,235,0.6);
+  transition:0.4s;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 25px rgba(31,111,235,1);
+}
+
+section{
+  padding:100px 10%;
+}
+
+.section-title{
+  font-size:2rem;
+  margin-bottom:40px;
+  position:relative;
+}
+
+.section-title::after{
+  content:"";
+  width:60px;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
+  position:absolute;
+  bottom:-10px;
+  left:0;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  padding:30px;
+  border-radius:20px;
+  margin-bottom:30px;
+  border:1px solid rgba(212,175,55,0.15);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(31,111,235,0.3);
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid rgba(212,175,55,0.2);
+  opacity:0.6;
+}
